@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         GIT_REPO_URL = 'https://github.com/amruthaa25/amruthasgit.git'
-        NGINX_PATH = 'D:\devops\Nginx\nginx-1.24.0\nginx-1.24.0\htmldocs'
+        NGINX_PATH = 'D:/devops/Nginx/nginx-1.24.0/nginx-1.24.0/htmldocs'
     }
 
     stages {
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Using the Jenkins workspace variable to reference files
-                    bat 'xcopy /y "D:\devops\master_slave" "%NGINX_PATH%"'
+                    bat 'xcopy /y "D:/devops/master_slave" "%NGINX_PATH%"'
                 }
             }
         }
